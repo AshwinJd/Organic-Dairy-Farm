@@ -1,0 +1,61 @@
+{% load static %}
+<head>
+<title>Cattle.....</title>
+	<link type="text/css" href="{% static 'css/invoice.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+function myFunction() {
+    window.print();
+}
+</script>
+<div class="container">
+
+
+ 
+
+<div class="Name">
+<div class="logo">
+    <img src="{%static 'img/logo.jpg'%}" alt="logo">
+</div>
+<h4>Dated: {{invoice_data.Date}}</h4>
+<h4>Name:  {{invoice_data.Customer_name}}</h4> 
+<h4>Amount Paid:   {{invoice_data.Amount_given}}</h4>
+<h4>Payment Method:   {{invoice_data.Payment_details}}</h4>
+
+</div>
+<div class="panel">
+<table>
+  <tr>
+    <th>Purchase Date</th>
+    <th>Quantity</th>
+    <th>Rate</th>
+  </tr>
+  <tr>
+    <td>{{invoice_data.Payment_Date}}</td>
+    <td>{{invoice_data.Quantity}}</td>
+    <td>{{invoice_data.Rate}}</td>
+  </tr>
+</table>
+</div>
+<br>
+<div class="total">
+<pre><h3>Total                                                 =         {{invoice_data.Total_amt}}</h3></pre>
+<pre><h3>New Dues                                              =         {{invoice_data.New_Dues}}</h3></pre>
+</br>
+<pre><h3>FSSAI-</h3></pre>
+<br><br><br>
+<pre><h3>SIGN</h3></pre>
+<pre><h3>                       MOB:    9971553733</h3></pre>
+<pre><h3>                     alok.kumar@paavniorganics.com</h3></pre>
+
+</div>
+
+</div>
+<button onclick="myFunction()">Print this page</button>
+
+
+
+
+</body>
