@@ -1,0 +1,51 @@
+body{
+	min-width: 1200px;
+	}
+.panel{
+	margin: 0px;
+	border: 1px solid black;
+	min-width: 200px;
+	width: auto;
+	float: left;
+}
+.container{
+	margin: 50px 120px;
+	border: 1px solid black;
+	width: 606px;
+}
+
+.heading{
+	background: #FEEFB3 !important;
+	padding: 2px;
+}
+.body{
+	padding: 10px 5px 150px 5px;
+}
+.name{
+	border:1px solid #FEEFB3;
+	padding: 5px;
+	width:594px;
+	background: #FEEFB3 !important;
+	border-bottom: 1px dotted black;
+}
+button{
+	margin-left: 500px;
+}
+.total{
+	margin: 226px 0 0 0;
+	border: 1px solid #FEEFB3;
+	width: 604px;
+	background: #FEEFB3 !important;
+}
+
+
+.date{
+	margin-left:500px;
+}
+
+
+.total .heading{
+	width:198px;
+	border-radius: 5px;
+}
+

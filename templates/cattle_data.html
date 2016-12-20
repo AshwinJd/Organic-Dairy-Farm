@@ -1,0 +1,223 @@
+
+{% load static %}
+{% if request.user.is_authenticated %}
+<head>
+	<title> CATTLE-{{cattle_data.cattle_Id}}</title>
+  <link type="text/css" href="{% static 'css/a.css' %}" rel="stylesheet">
+</head>
+
+<header>
+ <div class="container" >
+ <div class="logo">
+      <h1><a  href="{% url 'home' %}">Paavni Dairy Farms</a>  </h1> 
+      </div>
+ <nav>
+ 
+  <ul>
+   <li><a href="{% url 'auth_logout' %}">LOGOUT</a></li>
+   <li><a href="{% url 'home' %}">HOME</a>
+
+   </li>
+  
+
+  </ul>
+ </nav>
+</div>
+</header>
+<div class="title">
+	<h1>Cattle Details</h1>
+</div>
+
+<div class="contain">
+<table>
+	<tr>
+	<th>Cattle ID</th>
+	<td>{{cattle_data.cattle_Id}}</td>
+	</tr>
+	<tr>
+	<th>NAME</th>
+	<td>{{cattle_data.name}}</td>
+	</tr>
+	<tr>
+	<th>Breed</th>
+	<td>{{cattle_data.Breed}}</td>
+	</tr>
+	<tr><th>D.O.B</th>
+	<td>{{cattle_data.date_of_birth}}</td>
+	</tr>
+	<tr><th>Age</th>
+	<td>{{cattle_data.age}}</td>
+	</tr>
+	<tr><th>Weight</th>
+	<td>{{cattle_data.weight}}</td>
+	</tr>
+	<tr><th>Sex</th>
+	<td>{{cattle_data.sex}}</td>
+	
+	<tr><th>Pno buyer</th>
+	<td>{{cattle_data.pno_buyer}}</td>
+	</tr>
+	<tr><th>Pno seller</th>
+	<td>{{cattle_data.pno_seller}}</td>
+	</tr>
+	<tr>
+	<th>dehorning</th>
+	<td>{{cattle_data.dehorning}}</td>
+	</tr>
+	<tr>
+	<th>Insurance</th>
+	<td>{{cattle_data.Insurance}}</td>
+	</tr>
+	<tr>
+		<th>Date of Expiry of Insurance</th>
+		<td>{{cattle_data.date_of_expiry_insurance}}</td>
+	</tr>
+</table>
+
+</div>
+<!--vaccination details-->
+<div class="title">
+	<h1>Vaccination Records</h1>
+</div>
+<div class="contain">
+<table>
+	<tr>
+	<th>Vaccine For Foot and Mouth Disease (FMD)</th>
+	<td>{{cattle_data.Vaccine_for_Foot_and_Mouth_disease_FMD}}</td>
+	</tr>
+	<tr>
+	<th>Date of vaccination(FMD)</th>
+	<td>{{cattle_data.Date_FMD}}</td>
+	</tr>
+	<tr>
+	<th>CONFIRMATION (FMD)</th>
+	<td>{{cattle_data.Vaccine_FMD_confirmation}}</td>
+	</tr>
+
+	<tr><th>Vaccine for Hemorrhagic Septicemia (HS)</th>
+	<td>{{cattle_data.Vaccine_for_Hemorrhagic_Septicemia_HS}}</td>
+	</tr>
+	<tr><th>Date of vaccination(HS)</th>
+	<td>{{cattle_data.Date_HS}}</td>
+	</tr>
+	<tr><th>CONFIRMATION (HS)</th>
+	<td>{{cattle_data.Vaccine_HS_confirmation}}</td>
+	</tr>
+
+	<tr><th>Vaccine For Black Quarter (BQ)</th>
+	<td>{{cattle_data.Vaccine_for_Black_Quarter_BQ}}</td>
+	</tr>
+	<tr><th>Date Of Vaccination(BQ)</th>
+	<td>{{cattle_data.Date_BQ}}</td>
+	</tr>
+	<tr><th>CONFIRMATION (BQ)</th>
+	<td>{{cattle_data.Vaccine_BQ_confirmation}}</td>
+
+	<tr><th>Vaccine For Brucella</th>
+	<td>{{cattle_data.Vaccine_for_Brucella}}</td>
+	</tr>
+	<tr><th>Date Of Vaccination(Brucella)</th>
+	<td>{{cattle_data.Date_Brucella}}</td>
+	</tr>
+	<tr><th>CONFIRMATION (Brucella)</th>
+	<td>{{cattle_data.Vaccine_for_Brucella_confirmation}}</td>
+	
+	<tr>
+	<th>Vaccine For Theileriosis</th>
+	<td>{{cattle_data.Vaccine_for_Theileriosis}}</td>
+	</tr>
+	<tr><th>Date Of Vaccination(Theileriosis)</th>
+	<td>{{cattle_data.Date_T}}</td>
+	</tr>
+	<tr><th>CONFIRMATION (Theileriosis)</th>
+	<td>{{cattle_data.Vaccine_for_Theileriosis_confirmation}}</td>
+
+	<tr>
+		<th>Deworming (1st Quarter)</th>
+		<td>{{cattle_data.Deworming_1st_quarter_date}}</td>
+	</tr>
+	<tr>
+		<th>Medicine Name</th>
+		<td>{{cattle_data.Deworming_medicine_name_1}}</td>
+	</tr>
+	<tr>
+		<th>CONFIRMATION</th>
+		<td>{{cattle_data.Deworming_1st_quarter_confirmation}}</td>
+	</tr>
+	<tr>
+		<th>Deworming (2nd Quarter)</th>
+		<td>{{cattle_data.Deworming_2nd_quarter_date}}</td>
+	</tr>
+	<tr>
+		<th>Medicine Name</th>
+		<td>{{cattle_data.Deworming_medicine_name_2}}</td>
+	</tr>
+	<tr>
+		<th>CONFIRMATION</th>
+		<td>{{cattle_data.Deworming_2nd_quarter_confirmation}}</td>
+	</tr>
+
+	<tr>
+		<th>Deworming (3rd Quarter)</th>
+		<td>{{cattle_data.Deworming_3rd_quarter_date}}</td>
+	</tr>
+	<tr>
+		<th>Medicine Name</th>
+		<td>{{cattle_data.Deworming_medicine_name_3}}</td>
+	</tr>
+	<tr>
+		<th>CONFIRMATION</th>
+		<td>{{cattle_data.Deworming_3rd_quarter_confirmation}}</td>
+	</tr>
+
+	<tr>
+		<th>Deworming (4th Quarter)</th>
+		<td>{{cattle_data.Deworming_4th_quarter_date}}</td>
+	</tr>
+	<tr>
+		<th>Medicine Name</th>
+		<td>{{cattle_data.Deworming_medicine_name_4}}</td>
+	</tr>
+	<tr>
+		<th>CONFIRMATION</th>
+		<td>{{cattle_data.Deworming_4th_quarter_confirmation}}</td>
+	</tr>
+
+
+</table>
+</div>
+<div class="title">
+	<h1>Artificial Insemination Records</h1>
+</div>
+<div class="contain">
+<!--AI details-->
+<table>
+	<tr>
+		<th>Semen Details</th>
+		<td>{{cattle_data.Semen_details}}</td>
+	</tr>
+	<tr>
+		<th>Confirmation after one month</th>
+		<td>{{cattle_data.Confirmation_after_oneMonth}}</td>
+	</tr>
+	<tr>
+		<th>Confirmation after three months</th>
+		<td>{{cattle_data.Confirmation_after_threeMonth}}</td>
+	</tr>
+	<tr>
+		<th>Expected date of Delivery</th>
+		<td>{{cattle_data.Expected_date_of_Delivery}}</td>
+	</tr>
+	<tr>
+		<th>Delivery Status</th>
+		<td>{{cattle_data.Delivery_status}}</td>
+	</tr>
+	<tr>
+		<th>Sex Of Calf</th>
+		<td>{{cattle_data.Delivery_calf}}</td>
+	</tr>
+
+
+</table>
+</div>
+{%endif%}
